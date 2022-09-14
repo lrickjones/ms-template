@@ -1,0 +1,6 @@
+se/magnus/util/exceptions/InvalidInputException.class
+se/magnus/util/http/HttpErrorInfo.class
+se/magnus/util/exceptions/NotFoundException.class
+se/magnus/util/http/GlobalControllerExceptionHandler.class
+se/magnus/util/http/ServiceUtil.class
+se/magnus/util/exceptions/EventProcessingException.class

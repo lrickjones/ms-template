@@ -1,0 +1,7 @@
+se/magnus/microservices/core/review/services/ReviewServiceImpl.class
+se/magnus/microservices/core/review/services/MessageProcessor.class
+se/magnus/microservices/core/review/services/MessageProcessor$1.class
+se/magnus/microservices/core/review/persistence/ReviewRepository.class
+se/magnus/microservices/core/review/persistence/ReviewEntity.class
+se/magnus/microservices/core/review/services/ReviewMapper.class
+se/magnus/microservices/core/review/ReviewServiceApplication.class

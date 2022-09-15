@@ -1,6 +1,6 @@
-/home/ljones/Desktop/dev/ms-template/util/src/main/java/se/magnus/util/http/GlobalControllerExceptionHandler.java
-/home/ljones/Desktop/dev/ms-template/util/src/main/java/se/magnus/util/exceptions/InvalidInputException.java
-/home/ljones/Desktop/dev/ms-template/util/src/main/java/se/magnus/util/http/HttpErrorInfo.java
-/home/ljones/Desktop/dev/ms-template/util/src/main/java/se/magnus/util/http/ServiceUtil.java
-/home/ljones/Desktop/dev/ms-template/util/src/main/java/se/magnus/util/exceptions/NotFoundException.java
-/home/ljones/Desktop/dev/ms-template/util/src/main/java/se/magnus/util/exceptions/EventProcessingException.java
+/home/ljones/dev/ms-template/util/src/main/java/se/magnus/util/exceptions/EventProcessingException.java
+/home/ljones/dev/ms-template/util/src/main/java/se/magnus/util/exceptions/InvalidInputException.java
+/home/ljones/dev/ms-template/util/src/main/java/se/magnus/util/http/HttpErrorInfo.java
+/home/ljones/dev/ms-template/util/src/main/java/se/magnus/util/http/ServiceUtil.java
+/home/ljones/dev/ms-template/util/src/main/java/se/magnus/util/http/GlobalControllerExceptionHandler.java
+/home/ljones/dev/ms-template/util/src/main/java/se/magnus/util/exceptions/NotFoundException.java

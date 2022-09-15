@@ -4,4 +4,5 @@ se/magnus/microservices/core/product/persistence/ProductEntity.class
 se/magnus/microservices/core/product/services/MessageProcessor.class
 se/magnus/microservices/core/product/ProductServiceApplication.class
 se/magnus/microservices/core/product/services/ProductMapper.class
+se/magnus/microservices/core/product/services/ProductMapperImpl.class
 se/magnus/microservices/core/product/services/MessageProcessor$1.class

@@ -1,6 +1,6 @@
-/home/ljones/dev/ms-template/microservices/recommendation-service/src/main/java/se/magnus/microservices/core/recommendation/services/RecommendationServiceImpl.java
-/home/ljones/dev/ms-template/microservices/recommendation-service/src/main/java/se/magnus/microservices/core/recommendation/persistence/RecommendationEntity.java
-/home/ljones/dev/ms-template/microservices/recommendation-service/src/main/java/se/magnus/microservices/core/recommendation/services/MessageProcessor.java
-/home/ljones/dev/ms-template/microservices/recommendation-service/src/main/java/se/magnus/microservices/core/recommendation/services/RecommendationMapper.java
-/home/ljones/dev/ms-template/microservices/recommendation-service/src/main/java/se/magnus/microservices/core/recommendation/persistence/RecommendationRepository.java
-/home/ljones/dev/ms-template/microservices/recommendation-service/src/main/java/se/magnus/microservices/core/recommendation/RecommendationServiceApplication.java
+/home/ljones/Desktop/dev/ms-template/microservices/recommendation-service/src/main/java/se/magnus/microservices/core/recommendation/persistence/RecommendationRepository.java
+/home/ljones/Desktop/dev/ms-template/microservices/recommendation-service/src/main/java/se/magnus/microservices/core/recommendation/services/RecommendationMapper.java
+/home/ljones/Desktop/dev/ms-template/microservices/recommendation-service/src/main/java/se/magnus/microservices/core/recommendation/persistence/RecommendationEntity.java
+/home/ljones/Desktop/dev/ms-template/microservices/recommendation-service/src/main/java/se/magnus/microservices/core/recommendation/services/RecommendationServiceImpl.java
+/home/ljones/Desktop/dev/ms-template/microservices/recommendation-service/src/main/java/se/magnus/microservices/core/recommendation/services/MessageProcessor.java
+/home/ljones/Desktop/dev/ms-template/microservices/recommendation-service/src/main/java/se/magnus/microservices/core/recommendation/RecommendationServiceApplication.java

@@ -26,8 +26,14 @@ import static org.springframework.http.MediaType.APPLICATION_JSON;
 import static se.magnus.api.event.Event.Type.CREATE;
 import static se.magnus.api.event.Event.Type.DELETE;
 
+/// This test requires h2 database running with a review-db database created, change username/password as needed
 @RunWith(SpringRunner.class)
-@SpringBootTest(webEnvironment=RANDOM_PORT, properties = {"logging.level.se.magnus=DEBUG","spring.datasource.url=jdbc:h2:mem:reviewdb"})
+@SpringBootTest(webEnvironment=RANDOM_PORT, properties = {"logging.level.se.magnus=DEBUG",
+														  "spring.datasource.url=jdbc:h2:mem:review-db",
+															"spring.datasource.driverClassName=org.h2.Driver",
+															"spring.datasource.username=sa",
+															"spring.datasource.password=password",
+															"spring.jpa.datasource-platform=org.hibernate.dialect.H2Dialect"})
 public class ReviewServiceApplicationTests {
 
 	@Autowired

@@ -46,6 +46,8 @@ services:
     depends_on:
       rabbitmq:
         condition: service_healthy
+    expose:
+      - 8080
 
   # $ mongo
   mongodb:
@@ -59,6 +61,8 @@ services:
       interval: 10s
       timeout: 5s
       retries: 10
+    expose:
+      - 27017
 
   # $ mysql -uroot -h127.0.0.1 -p
   mysql:
@@ -78,7 +82,7 @@ services:
       retries: 10
 
   rabbitmq:
-    image: rabbitmq:3.7.8-management
+    image: rabbitmq:3.11-rc
     mem_limit: 350m
     ports:
       - 5672:5672

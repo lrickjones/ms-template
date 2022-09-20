@@ -1,3 +1,3 @@
-se/magnus/microservices/core/review/ReviewServiceApplicationTests.class
-se/magnus/microservices/core/review/MapperTests.class
-se/magnus/microservices/core/review/PersistenceTests.class
+im/backoffice/microservices/core/review/ReviewServiceApplicationTests.class
+im/backoffice/microservices/core/review/PersistenceTests.class
+im/backoffice/microservices/core/review/MapperTests.class

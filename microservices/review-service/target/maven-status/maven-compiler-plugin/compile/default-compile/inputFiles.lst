@@ -1,6 +1,6 @@
-/home/ljones/dev/ms-template/microservices/review-service/src/main/java/se/magnus/microservices/core/review/persistence/ReviewEntity.java
-/home/ljones/dev/ms-template/microservices/review-service/src/main/java/se/magnus/microservices/core/review/services/ReviewServiceImpl.java
-/home/ljones/dev/ms-template/microservices/review-service/src/main/java/se/magnus/microservices/core/review/services/ReviewMapper.java
-/home/ljones/dev/ms-template/microservices/review-service/src/main/java/se/magnus/microservices/core/review/persistence/ReviewRepository.java
-/home/ljones/dev/ms-template/microservices/review-service/src/main/java/se/magnus/microservices/core/review/services/MessageProcessor.java
-/home/ljones/dev/ms-template/microservices/review-service/src/main/java/se/magnus/microservices/core/review/ReviewServiceApplication.java
+/home/ljones/dev/ms-template/microservices/review-service/src/main/java/im/backoffice/microservices/core/review/services/ReviewServiceImpl.java
+/home/ljones/dev/ms-template/microservices/review-service/src/main/java/im/backoffice/microservices/core/review/ReviewServiceApplication.java
+/home/ljones/dev/ms-template/microservices/review-service/src/main/java/im/backoffice/microservices/core/review/services/ReviewMapper.java
+/home/ljones/dev/ms-template/microservices/review-service/src/main/java/im/backoffice/microservices/core/review/services/MessageProcessor.java
+/home/ljones/dev/ms-template/microservices/review-service/src/main/java/im/backoffice/microservices/core/review/persistence/ReviewRepository.java
+/home/ljones/dev/ms-template/microservices/review-service/src/main/java/im/backoffice/microservices/core/review/persistence/ReviewEntity.java

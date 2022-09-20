@@ -1,8 +1,8 @@
-se/magnus/microservices/core/recommendation/services/MessageProcessor.class
-se/magnus/microservices/core/recommendation/persistence/RecommendationEntity.class
-se/magnus/microservices/core/recommendation/services/RecommendationServiceImpl.class
-se/magnus/microservices/core/recommendation/persistence/RecommendationRepository.class
-se/magnus/microservices/core/recommendation/services/RecommendationMapper.class
-se/magnus/microservices/core/recommendation/services/RecommendationMapperImpl.class
-se/magnus/microservices/core/recommendation/RecommendationServiceApplication.class
-se/magnus/microservices/core/recommendation/services/MessageProcessor$1.class
+im/backoffice/microservices/core/recommendation/RecommendationServiceApplication.class
+im/backoffice/microservices/core/recommendation/services/MessageProcessor.class
+im/backoffice/microservices/core/recommendation/services/RecommendationServiceImpl.class
+im/backoffice/microservices/core/recommendation/persistence/RecommendationRepository.class
+im/backoffice/microservices/core/recommendation/persistence/RecommendationEntity.class
+im/backoffice/microservices/core/recommendation/services/MessageProcessor$1.class
+im/backoffice/microservices/core/recommendation/services/RecommendationMapperImpl.class
+im/backoffice/microservices/core/recommendation/services/RecommendationMapper.class

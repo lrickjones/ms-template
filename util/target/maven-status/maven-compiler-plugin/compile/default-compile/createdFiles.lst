@@ -1,6 +1,6 @@
-se/magnus/util/exceptions/InvalidInputException.class
-se/magnus/util/http/HttpErrorInfo.class
-se/magnus/util/exceptions/NotFoundException.class
-se/magnus/util/http/GlobalControllerExceptionHandler.class
-se/magnus/util/http/ServiceUtil.class
-se/magnus/util/exceptions/EventProcessingException.class
+im/backoffice/util/exceptions/InvalidInputException.class
+im/backoffice/util/http/HttpErrorInfo.class
+im/backoffice/util/exceptions/EventProcessingException.class
+im/backoffice/util/http/GlobalControllerExceptionHandler.class
+im/backoffice/util/exceptions/NotFoundException.class
+im/backoffice/util/http/ServiceUtil.class

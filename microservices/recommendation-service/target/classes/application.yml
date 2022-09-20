@@ -2,7 +2,7 @@ server.port: 7002
 server.error.include-message: always
 
 spring.data.mongodb:
-  host: localhost
+  host: 127.0.0.1
   port: 27017
   database: recommendation-db
 
@@ -39,7 +39,7 @@ spring.rabbitmq:
 logging:
   level:
     root: INFO
-    se.magnus: DEBUG
+    im.backoffice: DEBUG
     org.springframework.data.mongodb.core.MongoTemplate: DEBUG
 
 management.endpoint.health.show-details: "ALWAYS"

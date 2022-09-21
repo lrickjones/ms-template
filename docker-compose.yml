@@ -11,6 +11,12 @@ services:
         condition: service_healthy
       rabbitmq:
         condition: service_healthy
+    healthcheck:
+      test: "curl --fail --silent localhost:8080/actuator/health | grep UP || exit 1"
+      interval: 20s
+      timeout: 5s
+      retries: 5
+      # start_period: 40s # added version 3.4+
 
 
   recommendation:
@@ -23,6 +29,12 @@ services:
         condition: service_healthy
       rabbitmq:
         condition: service_healthy
+    healthcheck:
+      test: "curl --fail --silent localhost:8080/actuator/health | grep UP || exit 1"
+      interval: 20s
+      timeout: 5s
+      retries: 5
+      # start_period: 40s # added version 3.4+
 
   review:
     build: microservices/review-service
@@ -34,6 +46,12 @@ services:
         condition: service_healthy
       rabbitmq:
         condition: service_healthy
+    healthcheck:
+      test: "curl --fail --silent localhost:8080/actuator/health | grep UP || exit 1"
+      interval: 20s
+      timeout: 5s
+      retries: 5
+      # start_period: 40s # added version 3.4+
 
   product-composite:
     build: microservices/product-composite-service
@@ -48,6 +66,12 @@ services:
         condition: service_healthy
     expose:
       - 8080
+    healthcheck:
+        test: "curl --fail --silent localhost:8080/actuator/health | grep UP || exit 1"
+        interval: 20s
+        timeout: 5s
+        retries: 5
+        # start_period: 40s # added version 3.4+
 
   # $ mongo
   mongodb:

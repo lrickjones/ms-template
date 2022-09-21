@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<!--Spring Boot framework for 1.0.0 based services -->	
+	<parent>
+		<groupId>im.backoffice.parent</groupId>
+		<artifactId>spring-boot</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+		<relativePath/> <!-- lookup parent from repository -->	
+	</parent>
+
+	<groupId>im.backoffice.library</groupId>
+	<artifactId>library</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<name>${project.groupId}:${project.artifactId}</name>
+	<description>Base backoffice service artifact</description>
+	<packaging>pom</packaging>
+
+	<!--Common java version  -->
+	<properties>
+		<java.version>1.11</java.version>
+	</properties>
+
+	<!-- Manage where artifacts are sent on mvn deploy -->
+	<distributionManagement>
+	  	<repository>
+	      		<id>releases</id>
+	      		<name>libs-releases</name>
+	      		<url>https://norcas.accessline.com/artifactory/libs-release</url>
+	  	</repository>
+	  	<snapshotRepository>
+	      		<id>snapshots</id>
+	      		<name>libs-snapshots</name>
+	      		<url>https://norcas.accessline.com/artifactory/libs-snapshot</url>
+	  	</snapshotRepository>
+	</distributionManagement>
+
+	<dependencies>
+		<!-- Does not include actuator -->
+		<!--POJO, serialization, logging annotations -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.24</version>
+			<scope>provided</scope>
+		</dependency>	
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin> <!-- skip repackaging as spring boot uberjar -->
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<skip>true</skip>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.5</version>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
+

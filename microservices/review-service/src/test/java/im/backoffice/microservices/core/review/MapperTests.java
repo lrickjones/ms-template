@@ -2,14 +2,14 @@ package im.backoffice.microservices.core.review;
 
 import im.backoffice.microservices.core.review.persistence.ReviewEntity;
 import im.backoffice.microservices.core.review.services.ReviewMapper;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.mapstruct.factory.Mappers;
 import im.backoffice.api.core.review.Review;
 
 import java.util.Collections;
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class MapperTests {
 

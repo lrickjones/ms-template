@@ -2,17 +2,17 @@ package im.backoffice.microservices.core.product;
 
 import im.backoffice.microservices.core.product.persistence.ProductEntity;
 import im.backoffice.microservices.core.product.persistence.ProductRepository;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.data.mongo.DataMongoTest;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.dao.OptimisticLockingFailureException;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 import reactor.test.StepVerifier;
 
-@RunWith(SpringRunner.class)
+@ExtendWith(SpringExtension.class)
 @DataMongoTest
 public class PersistenceTests {
 
@@ -21,7 +21,7 @@ public class PersistenceTests {
 
     private ProductEntity savedEntity;
 
-    @Before
+    @BeforeEach
    	public void setupDb() {
         StepVerifier.create(repository.deleteAll()).verifyComplete();
 

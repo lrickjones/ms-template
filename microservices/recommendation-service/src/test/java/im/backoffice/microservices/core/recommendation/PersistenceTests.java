@@ -1,22 +1,23 @@
 package im.backoffice.microservices.core.recommendation;
 
 import im.backoffice.microservices.core.recommendation.persistence.RecommendationRepository;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.data.mongo.DataMongoTest;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.dao.OptimisticLockingFailureException;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 import im.backoffice.microservices.core.recommendation.persistence.RecommendationEntity;
 
 import java.util.List;
 
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.hasSize;
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
-@RunWith(SpringRunner.class)
+@ExtendWith(SpringExtension.class)
 @DataMongoTest
 public class PersistenceTests {
 
@@ -25,7 +26,7 @@ public class PersistenceTests {
 
     private RecommendationEntity savedEntity;
 
-    @Before
+    @BeforeEach
    	public void setupDb() {
    		repository.deleteAll().block();
 
@@ -72,10 +73,10 @@ public class PersistenceTests {
         assertEqualsRecommendation(savedEntity, entityList.get(0));
     }
 
-    @Test(expected = DuplicateKeyException.class)
+    @Test
    	public void duplicateError() {
         RecommendationEntity entity = new RecommendationEntity(1, 2, "a", 3, "c");
-        repository.save(entity).block();
+        assertThrows(DuplicateKeyException.class, () -> repository.save(entity).block());
     }
 
     @Test

@@ -2,9 +2,9 @@ package im.backoffice.microservices.core.review;
 
 import im.backoffice.microservices.core.review.persistence.ReviewRepository;
 import im.backoffice.util.exceptions.InvalidInputException;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.cloud.stream.messaging.Sink;
@@ -12,14 +12,15 @@ import org.springframework.http.HttpStatus;
 import org.springframework.integration.channel.AbstractMessageChannel;
 import org.springframework.messaging.MessagingException;
 import org.springframework.messaging.support.GenericMessage;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.reactive.server.WebTestClient;
 import im.backoffice.api.core.product.Product;
 import im.backoffice.api.core.review.Review;
 import im.backoffice.api.event.Event;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
 import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT;
 import static org.springframework.http.HttpStatus.*;
 import static org.springframework.http.MediaType.APPLICATION_JSON;
@@ -27,7 +28,7 @@ import static im.backoffice.api.event.Event.Type.CREATE;
 import static im.backoffice.api.event.Event.Type.DELETE;
 
 /// This test requires h2 database running with a review-db database created, change username/password as needed
-@RunWith(SpringRunner.class)
+@ExtendWith(SpringExtension.class)
 @SpringBootTest(webEnvironment=RANDOM_PORT, properties = {"logging.level.im.backoffice=DEBUG",
 														  "spring.datasource.url=jdbc:h2:mem:review-db",
 															"spring.datasource.driverClassName=org.h2.Driver",
@@ -47,7 +48,7 @@ public class ReviewServiceApplicationTests {
 
 	private AbstractMessageChannel input = null;
 
-	@Before
+	@BeforeEach
 	public void setupDb() {
 		input = (AbstractMessageChannel) channels.input();
 		repository.deleteAll();

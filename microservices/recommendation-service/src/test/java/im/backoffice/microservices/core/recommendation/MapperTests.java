@@ -1,6 +1,6 @@
 package im.backoffice.microservices.core.recommendation;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.mapstruct.factory.Mappers;
 import im.backoffice.api.core.recommendation.Recommendation;
 import im.backoffice.microservices.core.recommendation.persistence.RecommendationEntity;
@@ -9,7 +9,8 @@ import im.backoffice.microservices.core.recommendation.services.RecommendationMa
 import java.util.Collections;
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
+
 
 public class MapperTests {
 

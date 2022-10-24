@@ -1,5 +1,10 @@
 package im.backoffice.api.event;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer;
+import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
+
 import java.time.LocalDateTime;
 
 import static java.time.LocalDateTime.now;
@@ -11,6 +16,9 @@ public class Event<K, T> {
     private Event.Type eventType;
     private K key;
     private T data;
+
+    @JsonSerialize(using = LocalDateTimeSerializer.class)
+    @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     private LocalDateTime eventCreatedAt;
 
     public Event() {

@@ -1,12 +1,12 @@
 package im.backoffice.microservices.core.product;
 
 import im.backoffice.microservices.core.product.persistence.ProductEntity;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.mapstruct.factory.Mappers;
 import im.backoffice.api.core.product.Product;
 import im.backoffice.microservices.core.product.services.ProductMapper;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class MapperTests {
 

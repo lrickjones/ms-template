@@ -1,17 +1,5 @@
 package im.backoffice.microservices.composite.product;
 
-import org.hamcrest.Matchers;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.cloud.stream.test.binder.MessageCollector;
-import org.springframework.http.HttpStatus;
-import org.springframework.messaging.Message;
-import org.springframework.messaging.MessageChannel;
-import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.test.web.reactive.server.WebTestClient;
 import im.backoffice.api.composite.product.ProductAggregate;
 import im.backoffice.api.composite.product.RecommendationSummary;
 import im.backoffice.api.composite.product.ReviewSummary;
@@ -20,21 +8,32 @@ import im.backoffice.api.core.recommendation.Recommendation;
 import im.backoffice.api.core.review.Review;
 import im.backoffice.api.event.Event;
 import im.backoffice.microservices.composite.product.services.ProductCompositeIntegration;
+import org.hamcrest.Matchers;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.cloud.stream.test.binder.MessageCollector;
+import org.springframework.http.HttpStatus;
+import org.springframework.messaging.Message;
+import org.springframework.messaging.MessageChannel;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.springframework.test.web.reactive.server.WebTestClient;
 
 import java.util.concurrent.BlockingQueue;
 
+import static im.backoffice.api.event.Event.Type.CREATE;
+import static im.backoffice.api.event.Event.Type.DELETE;
 import static java.util.Collections.singletonList;
-import static org.hamcrest.Matchers.is;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT;
 import static org.springframework.cloud.stream.test.matcher.MessageQueueMatcher.receivesPayloadThat;
 import static org.springframework.http.HttpStatus.OK;
 import static reactor.core.publisher.Mono.just;
-import static im.backoffice.api.event.Event.Type.CREATE;
-import static im.backoffice.api.event.Event.Type.DELETE;
 
-@RunWith(SpringRunner.class)
+@ExtendWith(SpringExtension.class)
 @SpringBootTest(webEnvironment=RANDOM_PORT)
 
 public class MessagingTests {
@@ -56,7 +55,7 @@ public class MessagingTests {
 	BlockingQueue<Message<?>> queueRecommendations = null;
 	BlockingQueue<Message<?>> queueReviews = null;
 
-	@Before
+	@BeforeEach
 	public void setUp() {
 		queueProducts = getQueue(channels.outputProducts());
 		queueRecommendations = getQueue(channels.outputRecommendations());

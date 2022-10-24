@@ -1,22 +1,22 @@
 package im.backoffice.microservices.composite.product;
 
-import im.backoffice.util.exceptions.InvalidInputException;
-import im.backoffice.util.exceptions.NotFoundException;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.http.HttpStatus;
-import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.test.web.reactive.server.WebTestClient;
-import reactor.core.publisher.Flux;
-import reactor.core.publisher.Mono;
 import im.backoffice.api.core.product.Product;
 import im.backoffice.api.core.recommendation.Recommendation;
 import im.backoffice.api.core.review.Review;
 import im.backoffice.microservices.composite.product.services.ProductCompositeIntegration;
+import im.backoffice.util.exceptions.InvalidInputException;
+import im.backoffice.util.exceptions.NotFoundException;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.http.HttpStatus;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.springframework.test.web.reactive.server.WebTestClient;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
 import static java.util.Collections.singletonList;
 import static org.mockito.Mockito.when;
@@ -24,7 +24,7 @@ import static org.springframework.boot.test.context.SpringBootTest.WebEnvironmen
 import static org.springframework.http.HttpStatus.*;
 import static org.springframework.http.MediaType.APPLICATION_JSON;
 
-@RunWith(SpringRunner.class)
+@ExtendWith(SpringExtension.class)
 @SpringBootTest(webEnvironment=RANDOM_PORT)
 public class ProductCompositeServiceApplicationTests {
 
@@ -38,7 +38,7 @@ public class ProductCompositeServiceApplicationTests {
 	@MockBean
 	private ProductCompositeIntegration compositeIntegration;
 
-	@Before
+	@BeforeEach
 	public void setUp() {
 
 		when(compositeIntegration.getProduct(PRODUCT_ID_OK)).

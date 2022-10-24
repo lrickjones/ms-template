@@ -7,7 +7,7 @@
 		<artifactId>ms-template</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
-	<groupId>im.backoffice.api</groupId>
+	<groupId>im.backoffice.microservices.api</groupId>
 	<artifactId>api</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>jar</packaging>

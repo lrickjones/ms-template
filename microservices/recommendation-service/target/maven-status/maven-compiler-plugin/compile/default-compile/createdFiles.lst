@@ -3,6 +3,6 @@ im/backoffice/microservices/core/recommendation/services/MessageProcessor.class
 im/backoffice/microservices/core/recommendation/services/RecommendationServiceImpl.class
 im/backoffice/microservices/core/recommendation/persistence/RecommendationRepository.class
 im/backoffice/microservices/core/recommendation/persistence/RecommendationEntity.class
-im/backoffice/microservices/core/recommendation/services/MessageProcessor$1.class
 im/backoffice/microservices/core/recommendation/services/RecommendationMapperImpl.class
+im/backoffice/microservices/core/recommendation/services/MessageProcessor$1.class
 im/backoffice/microservices/core/recommendation/services/RecommendationMapper.class

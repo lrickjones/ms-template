@@ -4,10 +4,10 @@ im/backoffice/api/core/recommendation/Recommendation.class
 im/backoffice/api/core/product/Product.class
 im/backoffice/api/core/product/ProductService.class
 im/backoffice/api/composite/product/RecommendationSummary.class
-im/backoffice/api/composite/product/ProductCompositeService.class
 im/backoffice/api/core/review/ReviewService.class
+im/backoffice/api/composite/product/ProductCompositeService.class
 im/backoffice/api/event/Event.class
-im/backoffice/api/composite/product/ServiceAddresses.class
 im/backoffice/api/event/Event$Type.class
+im/backoffice/api/composite/product/ServiceAddresses.class
 im/backoffice/api/core/recommendation/RecommendationService.class
 im/backoffice/api/composite/product/ReviewSummary.class

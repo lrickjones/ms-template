@@ -1,4 +1,4 @@
-/home/ljones/dev/ms-template/microservices/product-composite-service/src/test/java/im/backoffice/microservices/composite/product/IsSameEventTests.java
-/home/ljones/dev/ms-template/microservices/product-composite-service/src/test/java/im/backoffice/microservices/composite/product/ProductCompositeServiceApplicationTests.java
-/home/ljones/dev/ms-template/microservices/product-composite-service/src/test/java/im/backoffice/microservices/composite/product/IsSameEvent.java
-/home/ljones/dev/ms-template/microservices/product-composite-service/src/test/java/im/backoffice/microservices/composite/product/MessagingTests.java
+/home/rick/intermedia/dev/ms-template/microservices/product-composite-service/src/test/java/im/backoffice/microservices/composite/product/ProductCompositeServiceApplicationTests.java
+/home/rick/intermedia/dev/ms-template/microservices/product-composite-service/src/test/java/im/backoffice/microservices/composite/product/IsSameEventTests.java
+/home/rick/intermedia/dev/ms-template/microservices/product-composite-service/src/test/java/im/backoffice/microservices/composite/product/IsSameEvent.java
+/home/rick/intermedia/dev/ms-template/microservices/product-composite-service/src/test/java/im/backoffice/microservices/composite/product/MessagingTests.java

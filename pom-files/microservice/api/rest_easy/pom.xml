@@ -6,11 +6,12 @@
         <groupId>im.backoffice.parent</groupId>
         <artifactId>spring-boot</artifactId>
         <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../../../parent/pom.xml</relativePath>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>im.backoffice.api</groupId>
-    <artifactId>asynchronous-api</artifactId>
+    <artifactId>rest_easy</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>${project.groupId}:${project.artifactId}</name>

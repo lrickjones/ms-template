@@ -12,7 +12,7 @@
 	</parent>
 
 	<groupId>im.backoffice.service</groupId>
-	<artifactId>service</artifactId>
+	<artifactId>service-starter</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<name>${project.groupId}:${project.artifactId}</name>
 	<description>Base backoffice service artifact</description>
@@ -38,36 +38,32 @@
 	</distributionManagement>
 
 	<dependencies>
-		<!-- System health api -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>
+		<!-- Does not include actuator -->
 		<!--POJO, serialization, logging annotations -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<version>1.18.24</version>
 			<scope>provided</scope>
-		</dependency>
-		<!-- junit and mockito -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
+		</dependency>	
 	</dependencies>
 
-	<!-- Set up to build executable uber jar -->
 	<build>
 		<plugins>
-			<plugin>
+			<plugin> <!-- skip repackaging as spring boot uberjar -->
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<skip>true</skip>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.5</version>
 			</plugin>
 		</plugins>
 	</build>
-
 
 </project>
 

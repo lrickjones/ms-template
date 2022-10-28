@@ -26,7 +26,7 @@
 		</dependency>
 		<dependency>
 			<groupId>im.backoffice.service</groupId>
-			<artifactId>service</artifactId>
+			<artifactId>service-starter</artifactId>
 			<version>1.0.0-SNAPSHOT</version>
 			<type>pom</type>
 		</dependency>

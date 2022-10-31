@@ -12,7 +12,7 @@
 	</parent>
 
 	<properties>
-		<spring-boot.version>${parent.version}</spring-boot.version>
+		<spring-boot.version>${project.parent.version}</spring-boot.version>
 	</properties>
 
 	<groupId>im.backoffice.parent</groupId>

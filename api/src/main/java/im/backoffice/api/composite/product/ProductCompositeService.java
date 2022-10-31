@@ -7,7 +7,7 @@ import io.swagger.annotations.ApiResponses;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Mono;
 
-@Api(description = "REST API for composite product information.")
+@Api(tags = "REST API for composite product information.")
 public interface ProductCompositeService {
 
     /**

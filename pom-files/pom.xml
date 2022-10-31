@@ -35,14 +35,14 @@
 
     <modules>
         <module>parent</module>
-        <module>microservice/api</module>
         <module>microservice/service</module>
+        <module>microservice/library</module>
         <module>db/mongo</module>
         <module>db/mysql</module>
         <module>health</module>
         <module>messaging</module>
-        <module>microservice/api/asynchronous</module>
-        <module>microservice/api/rest_easy</module>
+        <module>api/asynchronous</module>
+        <module>api/rest_easy</module>
     </modules>
 
 </project>

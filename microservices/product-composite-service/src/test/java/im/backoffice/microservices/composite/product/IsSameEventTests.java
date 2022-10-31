@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import im.backoffice.api.core.product.Product;
 import im.backoffice.api.event.Event;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mock;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;

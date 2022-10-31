@@ -1,13 +1,16 @@
 package im.backoffice.microservices.composite.product;
 
+import im.backoffice.microservices.composite.product.services.ProductCompositeIntegration;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.actuate.health.*;
+import org.springframework.boot.actuate.health.DefaultHealthContributorRegistry;
+import org.springframework.boot.actuate.health.HealthContributorRegistry;
+import org.springframework.boot.actuate.health.ReactiveHealthIndicator;
+import org.springframework.boot.actuate.health.StatusAggregator;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
-import im.backoffice.microservices.composite.product.services.ProductCompositeIntegration;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.service.ApiInfo;
 import springfox.documentation.service.Contact;
@@ -62,23 +65,25 @@ public class ProductCompositeServiceApplication {
                 ));
     }
 
-	//@Autowired
-	//HealthAggregator healthAggregator;
+	//TODO: implement health aggregator
+	@Autowired
+	StatusAggregator healthAggregator;
 
 	@Autowired
 	ProductCompositeIntegration integration;
 
-	//@Bean
-	//ReactiveHealthIndicator coreServices() {
+	@Bean
+	ReactiveHealthIndicator coreServices() {
 
-	//	ReactiveHealthIndicatorRegistry registry = new DefaultReactiveHealthIndicatorRegistry(new LinkedHashMap<>());
+		//HealthContributorRegistry registry = new DefaultHealthContributorRegistry(new LinkedHashMap<>());
 
-	//	registry.register("product", () -> integration.getProductHealth());
-	//	registry.register("recommendation", () -> integration.getRecommendationHealth());
-	//	registry.register("review", () -> integration.getReviewHealth());
+		//registry.registerContributor("product", integration.getProductHealth());
+		//registry.registerContributor("recommendation", () -> integration.getRecommendationHealth());
+		//registry.registerContributor("review", () -> integration.getReviewHealth());
 
-	//	return new CompositeReactiveHealthIndicator(healthAggregator, registry);
-	//}
+		//return new ReactiveHealthIndicator(healthAggregator, registry);
+		return null;
+	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(ProductCompositeServiceApplication.class, args);

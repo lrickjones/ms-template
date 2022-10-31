@@ -31,7 +31,6 @@ import java.io.IOException;
 import static reactor.core.publisher.Flux.empty;
 import static im.backoffice.api.event.Event.Type.CREATE;
 import static im.backoffice.api.event.Event.Type.DELETE;
-
 @EnableBinding(ProductCompositeIntegration.MessageSources.class)
 @Component
 public class ProductCompositeIntegration implements ProductService, RecommendationService, ReviewService {

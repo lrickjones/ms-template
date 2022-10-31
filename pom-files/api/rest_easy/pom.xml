@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <parent>
+        <groupId>im.backoffice.parent</groupId>
+        <artifactId>spring-boot</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../../parent/pom.xml</relativePath>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>im.backoffice.api</groupId>
+    <artifactId>rest_easy</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>${project.groupId}:${project.artifactId}</name>
+    <description>Support for reactive dependencies</description>
+    <properties>
+        <jboss.version>5.1.0.Final</jboss.version>
+    </properties>
+    <dependencies>
+
+        <dependency>
+            <groupId>org.jboss.resteasy</groupId>
+            <artifactId>resteasy-servlet-spring-boot-starter</artifactId>
+            <version>${jboss.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jboss.resteasy</groupId>
+            <artifactId>resteasy-reactor-netty-spring-boot-starter</artifactId>
+            <version>${jboss.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+
+    </dependencies>
+</project>

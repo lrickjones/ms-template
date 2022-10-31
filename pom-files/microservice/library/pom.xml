@@ -8,11 +8,11 @@
 		<groupId>im.backoffice.parent</groupId>
 		<artifactId>spring-boot</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
-		<relativePath/> <!-- lookup parent from repository -->	
+		<relativePath>../../parent/pom.xml</relativePath>
 	</parent>
 
-	<groupId>im.backoffice.api</groupId>
-	<artifactId>api-starter</artifactId>
+	<groupId>im.backoffice.library</groupId>
+	<artifactId>library-starter</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<name>${project.groupId}:${project.artifactId}</name>
 	<description>Base backoffice service artifact</description>
@@ -38,11 +38,7 @@
 	</distributionManagement>
 
 	<dependencies>
-		<!-- System health api -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>
+		<!-- Does not include actuator -->
 		<!--POJO, serialization, logging annotations -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
@@ -58,16 +54,22 @@
 		</dependency>
 	</dependencies>
 
-	<!-- Set up to build executable uber jar -->
 	<build>
 		<plugins>
-			<plugin>
+			<plugin> <!-- skip repackaging as spring boot uberjar -->
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<skip>true</skip>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.5</version>
 			</plugin>
 		</plugins>
 	</build>
-
 
 </project>
 

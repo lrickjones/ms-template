@@ -22,8 +22,8 @@
 	<dependencies>
 
 		<dependency>
-			<groupId>im.backoffice.service</groupId>
-			<artifactId>service-starter</artifactId>
+			<groupId>im.backoffice.library</groupId>
+			<artifactId>library-starter</artifactId>
 			<version>1.0.0-SNAPSHOT</version>
 			<type>pom</type>
 		</dependency>

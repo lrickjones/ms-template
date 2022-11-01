@@ -39,6 +39,7 @@
         <module>microservice/library</module>
         <module>db/mongo</module>
         <module>db/mysql</module>
+        <module>db/sql-test</module>
         <module>health</module>
         <module>messaging</module>
         <module>api/asynchronous</module>

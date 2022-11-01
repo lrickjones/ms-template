@@ -6,27 +6,23 @@
         <groupId>im.backoffice.parent</groupId>
         <artifactId>spring-boot</artifactId>
         <version>1.0.0-SNAPSHOT</version>
-        <relativePath>../../parent/pom.xml</relativePath>
+        <relativePath>../../../parent/pom.xml</relativePath>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>im.backoffice.db</groupId>
-    <artifactId>mongo</artifactId>
+    <groupId>im.backoffice.api</groupId>
+    <artifactId>rest_easy-test</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <name>${project.groupId}:${project.project.artifactId}</name>
+    <name>${project.groupId}:${project.artifactId}</name>
     <description>Support for reactive dependencies</description>
     <properties>
-        <java.version>11</java.version>
+        <jboss.version>5.1.0.Final</jboss.version>
     </properties>
-
     <dependencies>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-mongodb-reactive</artifactId>
+            <artifactId>spring-boot-starter-test</artifactId>
         </dependency>
-
     </dependencies>
-
 </project>

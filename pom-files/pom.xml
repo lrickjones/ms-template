@@ -42,8 +42,11 @@
         <module>db/sql-test</module>
         <module>health</module>
         <module>messaging</module>
+        <module>messaging/test</module>
         <module>api/asynchronous</module>
+        <module>api/asynchronous/test</module>
         <module>api/rest_easy</module>
+        <module>api/rest_easy/test</module>
     </modules>
 
 </project>

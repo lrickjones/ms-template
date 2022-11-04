@@ -58,6 +58,13 @@
 			<version>${mapstruct.version}</version>
 		</dependency>
 
+		<dependency>
+			<groupId>im.vbo.common</groupId>
+			<artifactId>common-utils</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
+			<type>pom</type>
+		</dependency>
+
 		<!-- junit and mockito -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

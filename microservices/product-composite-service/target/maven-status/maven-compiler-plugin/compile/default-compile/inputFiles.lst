@@ -1,3 +1,3 @@
-/home/rick/intermedia/dev/ms-template/microservices/product-composite-service/src/main/java/im/backoffice/microservices/composite/product/services/ProductCompositeServiceImpl.java
-/home/rick/intermedia/dev/ms-template/microservices/product-composite-service/src/main/java/im/backoffice/microservices/composite/product/ProductCompositeServiceApplication.java
-/home/rick/intermedia/dev/ms-template/microservices/product-composite-service/src/main/java/im/backoffice/microservices/composite/product/services/ProductCompositeIntegration.java
+/home/rick/intermedia/dev/ms-template/microservices/product-composite-service/src/main/java/im/vbo/microservices/composite/product/services/ProductCompositeIntegration.java
+/home/rick/intermedia/dev/ms-template/microservices/product-composite-service/src/main/java/im/vbo/microservices/composite/product/ProductCompositeServiceApplication.java
+/home/rick/intermedia/dev/ms-template/microservices/product-composite-service/src/main/java/im/vbo/microservices/composite/product/services/ProductCompositeServiceImpl.java

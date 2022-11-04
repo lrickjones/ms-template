@@ -1,6 +1,6 @@
-/home/rick/intermedia/dev/ms-template/microservices/review-service/src/main/java/im/backoffice/microservices/core/review/persistence/ReviewRepository.java
-/home/rick/intermedia/dev/ms-template/microservices/review-service/src/main/java/im/backoffice/microservices/core/review/persistence/ReviewEntity.java
-/home/rick/intermedia/dev/ms-template/microservices/review-service/src/main/java/im/backoffice/microservices/core/review/services/ReviewMapper.java
-/home/rick/intermedia/dev/ms-template/microservices/review-service/src/main/java/im/backoffice/microservices/core/review/services/MessageProcessor.java
-/home/rick/intermedia/dev/ms-template/microservices/review-service/src/main/java/im/backoffice/microservices/core/review/ReviewServiceApplication.java
-/home/rick/intermedia/dev/ms-template/microservices/review-service/src/main/java/im/backoffice/microservices/core/review/services/ReviewServiceImpl.java
+/home/rick/intermedia/dev/ms-template/microservices/review-service/src/main/java/im/vbo/microservices/core/review/ReviewServiceApplication.java
+/home/rick/intermedia/dev/ms-template/microservices/review-service/src/main/java/im/vbo/microservices/core/review/persistence/ReviewRepository.java
+/home/rick/intermedia/dev/ms-template/microservices/review-service/src/main/java/im/vbo/microservices/core/review/persistence/ReviewEntity.java
+/home/rick/intermedia/dev/ms-template/microservices/review-service/src/main/java/im/vbo/microservices/core/review/services/MessageProcessor.java
+/home/rick/intermedia/dev/ms-template/microservices/review-service/src/main/java/im/vbo/microservices/core/review/services/ReviewServiceImpl.java
+/home/rick/intermedia/dev/ms-template/microservices/review-service/src/main/java/im/vbo/microservices/core/review/services/ReviewMapper.java

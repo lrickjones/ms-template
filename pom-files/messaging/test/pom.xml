@@ -3,14 +3,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <parent>
-        <groupId>im.backoffice.parent</groupId>
+        <groupId>im.vbo.parent</groupId>
         <artifactId>spring-boot</artifactId>
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>../../parent/pom.xml</relativePath>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>im.backoffice.messaging</groupId>
+    <groupId>im.vbo.messaging</groupId>
     <artifactId>rabbit-kafka-test</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>

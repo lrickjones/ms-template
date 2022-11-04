@@ -3,12 +3,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>im.backoffice.service</groupId>
+		<groupId>im.vbo.service</groupId>
 		<artifactId>service-starter</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>im.backoffice.microservices</groupId>
+	<groupId>im.vbo.microservices</groupId>
 	<artifactId>ms-template</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>

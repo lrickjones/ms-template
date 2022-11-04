@@ -1,5 +1,5 @@
-im/backoffice/microservices/composite/product/IsSameEventTests.class
-im/backoffice/microservices/composite/product/IsSameEvent$1.class
-im/backoffice/microservices/composite/product/MessagingTests.class
-im/backoffice/microservices/composite/product/ProductCompositeServiceApplicationTests.class
-im/backoffice/microservices/composite/product/IsSameEvent.class
+im/vbo/microservices/composite/product/MessagingTests.class
+im/vbo/microservices/composite/product/ProductCompositeServiceApplicationTests.class
+im/vbo/microservices/composite/product/IsSameEventTests.class
+im/vbo/microservices/composite/product/IsSameEvent.class
+im/vbo/microservices/composite/product/IsSameEvent$1.class

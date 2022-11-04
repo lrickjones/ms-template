@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# ./grdelw clean build
+# mvn clean package
 # docker-compose build
 # docker-compose up -d
 #
@@ -84,6 +84,7 @@ function waitForService() {
 }
 
 function testCompositeCreated() {
+    echo "testCompositeCreated()"
 
     # Expect that the Product Composite for productId $PROD_ID_REVS_RECS has been created with three recommendations and three reviews
     if ! assertCurl 200 "curl http://$HOST:$PORT/product-composite/$PROD_ID_REVS_RECS -s"
@@ -193,32 +194,32 @@ setupTestdata
 
 waitForMessageProcessing
 
-# Verify that a normal request works, expect three recommendations and three reviews
+echo "Verify that a normal request works, expect three recommendations and three reviews"
 assertCurl 200 "curl http://$HOST:$PORT/product-composite/$PROD_ID_REVS_RECS -s"
 assertEqual "$PROD_ID_REVS_RECS" $(echo $RESPONSE | jq .productId)
 assertEqual 3 $(echo $RESPONSE | jq ".recommendations | length")
 assertEqual 3 $(echo $RESPONSE | jq ".reviews | length")
 
-# Verify that a 404 (Not Found) error is returned for a non existing productId ($PROD_ID_NOT_FOUND)
+echo "Verify that a 404 (Not Found) error is returned for a non existing productId ($PROD_ID_NOT_FOUND)"
 assertCurl 404 "curl http://$HOST:$PORT/product-composite/$PROD_ID_NOT_FOUND -s"
 
-# Verify that no recommendations are returned for productId $PROD_ID_NO_RECS
+echo "Verify that no recommendations are returned for productId $PROD_ID_NO_RECS"
 assertCurl 200 "curl http://$HOST:$PORT/product-composite/$PROD_ID_NO_RECS -s"
 assertEqual "$PROD_ID_NO_RECS" $(echo $RESPONSE | jq .productId)
 assertEqual 0 $(echo $RESPONSE | jq ".recommendations | length")
 assertEqual 3 $(echo $RESPONSE | jq ".reviews | length")
 
-# Verify that no reviews are returned for productId $PROD_ID_NO_REVS
+echo "Verify that no reviews are returned for productId $PROD_ID_NO_REVS"
 assertCurl 200 "curl http://$HOST:$PORT/product-composite/$PROD_ID_NO_REVS -s"
 assertEqual $PROD_ID_NO_REVS $(echo $RESPONSE | jq .productId)
 assertEqual 3 $(echo $RESPONSE | jq ".recommendations | length")
 assertEqual 0 $(echo $RESPONSE | jq ".reviews | length")
 
-# Verify that a 422 (Unprocessable Entity) error is returned for a productId that is out of range (-1)
+echo "Verify that a 422 (Unprocessable Entity) error is returned for a productId that is out of range (-1)"
 assertCurl 422 "curl http://$HOST:$PORT/product-composite/-1 -s"
 assertEqual "\"Invalid productId: -1\"" "$(echo $RESPONSE | jq .message)"
 
-# Verify that a 400 (Bad Request) error error is returned for a productId that is not a number, i.e. invalid format
+echo "Verify that a 400 (Bad Request) error error is returned for a productId that is not a number, i.e. invalid format"
 assertCurl 400 "curl http://$HOST:$PORT/product-composite/invalidProductId -s"
 assertEqual "\"Type mismatch.\"" "$(echo $RESPONSE | jq .message)"
 

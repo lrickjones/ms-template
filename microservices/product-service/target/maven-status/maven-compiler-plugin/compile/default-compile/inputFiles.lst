@@ -1,6 +1,6 @@
-/home/rick/intermedia/dev/ms-template/microservices/product-service/src/main/java/im/backoffice/microservices/core/product/persistence/ProductRepository.java
-/home/rick/intermedia/dev/ms-template/microservices/product-service/src/main/java/im/backoffice/microservices/core/product/services/MessageProcessor.java
-/home/rick/intermedia/dev/ms-template/microservices/product-service/src/main/java/im/backoffice/microservices/core/product/services/ProductMapper.java
-/home/rick/intermedia/dev/ms-template/microservices/product-service/src/main/java/im/backoffice/microservices/core/product/services/ProductServiceImpl.java
-/home/rick/intermedia/dev/ms-template/microservices/product-service/src/main/java/im/backoffice/microservices/core/product/persistence/ProductEntity.java
-/home/rick/intermedia/dev/ms-template/microservices/product-service/src/main/java/im/backoffice/microservices/core/product/ProductServiceApplication.java
+/home/rick/intermedia/dev/ms-template/microservices/product-service/src/main/java/im/vbo/microservices/core/product/ProductServiceApplication.java
+/home/rick/intermedia/dev/ms-template/microservices/product-service/src/main/java/im/vbo/microservices/core/product/services/ProductServiceImpl.java
+/home/rick/intermedia/dev/ms-template/microservices/product-service/src/main/java/im/vbo/microservices/core/product/services/MessageProcessor.java
+/home/rick/intermedia/dev/ms-template/microservices/product-service/src/main/java/im/vbo/microservices/core/product/persistence/ProductRepository.java
+/home/rick/intermedia/dev/ms-template/microservices/product-service/src/main/java/im/vbo/microservices/core/product/persistence/ProductEntity.java
+/home/rick/intermedia/dev/ms-template/microservices/product-service/src/main/java/im/vbo/microservices/core/product/services/ProductMapper.java

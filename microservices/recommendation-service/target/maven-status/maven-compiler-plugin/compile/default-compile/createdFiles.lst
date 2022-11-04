@@ -1,8 +1,8 @@
-im/backoffice/microservices/core/recommendation/RecommendationServiceApplication.class
-im/backoffice/microservices/core/recommendation/services/MessageProcessor.class
-im/backoffice/microservices/core/recommendation/services/RecommendationServiceImpl.class
-im/backoffice/microservices/core/recommendation/persistence/RecommendationRepository.class
-im/backoffice/microservices/core/recommendation/persistence/RecommendationEntity.class
-im/backoffice/microservices/core/recommendation/services/RecommendationMapperImpl.class
-im/backoffice/microservices/core/recommendation/services/MessageProcessor$1.class
-im/backoffice/microservices/core/recommendation/services/RecommendationMapper.class
+im/vbo/microservices/core/recommendation/services/RecommendationMapperImpl.class
+im/vbo/microservices/core/recommendation/RecommendationServiceApplication.class
+im/vbo/microservices/core/recommendation/persistence/RecommendationRepository.class
+im/vbo/microservices/core/recommendation/services/MessageProcessor$1.class
+im/vbo/microservices/core/recommendation/services/RecommendationMapper.class
+im/vbo/microservices/core/recommendation/services/RecommendationServiceImpl.class
+im/vbo/microservices/core/recommendation/services/MessageProcessor.class
+im/vbo/microservices/core/recommendation/persistence/RecommendationEntity.class

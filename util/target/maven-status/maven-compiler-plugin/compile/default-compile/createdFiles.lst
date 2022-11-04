@@ -1,6 +1,6 @@
-im/backoffice/util/exceptions/InvalidInputException.class
-im/backoffice/util/http/HttpErrorInfo.class
-im/backoffice/util/exceptions/EventProcessingException.class
-im/backoffice/util/http/GlobalControllerExceptionHandler.class
-im/backoffice/util/exceptions/NotFoundException.class
-im/backoffice/util/http/ServiceUtil.class
+im/vbo/office/util/http/GlobalControllerExceptionHandler.class
+im/vbo/office/util/exceptions/EventProcessingException.class
+im/vbo/office/util/http/ServiceUtil.class
+im/vbo/office/util/exceptions/NotFoundException.class
+im/vbo/office/util/exceptions/InvalidInputException.class
+im/vbo/office/util/http/HttpErrorInfo.class

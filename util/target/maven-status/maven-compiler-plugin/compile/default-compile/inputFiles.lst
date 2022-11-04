@@ -1,6 +1,6 @@
-/home/rick/intermedia/dev/ms-template/util/src/main/java/im/backoffice/util/exceptions/EventProcessingException.java
-/home/rick/intermedia/dev/ms-template/util/src/main/java/im/backoffice/util/exceptions/InvalidInputException.java
-/home/rick/intermedia/dev/ms-template/util/src/main/java/im/backoffice/util/http/GlobalControllerExceptionHandler.java
-/home/rick/intermedia/dev/ms-template/util/src/main/java/im/backoffice/util/exceptions/NotFoundException.java
-/home/rick/intermedia/dev/ms-template/util/src/main/java/im/backoffice/util/http/ServiceUtil.java
-/home/rick/intermedia/dev/ms-template/util/src/main/java/im/backoffice/util/http/HttpErrorInfo.java
+/home/rick/intermedia/dev/ms-template/util/src/main/java/im/vbo/office/util/http/ServiceUtil.java
+/home/rick/intermedia/dev/ms-template/util/src/main/java/im/vbo/office/util/http/GlobalControllerExceptionHandler.java
+/home/rick/intermedia/dev/ms-template/util/src/main/java/im/vbo/office/util/exceptions/InvalidInputException.java
+/home/rick/intermedia/dev/ms-template/util/src/main/java/im/vbo/office/util/http/HttpErrorInfo.java
+/home/rick/intermedia/dev/ms-template/util/src/main/java/im/vbo/office/util/exceptions/EventProcessingException.java
+/home/rick/intermedia/dev/ms-template/util/src/main/java/im/vbo/office/util/exceptions/NotFoundException.java

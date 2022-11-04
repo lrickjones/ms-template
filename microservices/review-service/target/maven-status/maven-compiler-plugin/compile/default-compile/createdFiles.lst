@@ -1,8 +1,8 @@
-im/backoffice/microservices/core/review/persistence/ReviewRepository.class
-im/backoffice/microservices/core/review/persistence/ReviewEntity.class
-im/backoffice/microservices/core/review/services/MessageProcessor$1.class
-im/backoffice/microservices/core/review/services/ReviewMapperImpl.class
-im/backoffice/microservices/core/review/services/MessageProcessor.class
-im/backoffice/microservices/core/review/ReviewServiceApplication.class
-im/backoffice/microservices/core/review/services/ReviewMapper.class
-im/backoffice/microservices/core/review/services/ReviewServiceImpl.class
+im/vbo/microservices/core/review/persistence/ReviewEntity.class
+im/vbo/microservices/core/review/services/MessageProcessor$1.class
+im/vbo/microservices/core/review/ReviewServiceApplication.class
+im/vbo/microservices/core/review/persistence/ReviewRepository.class
+im/vbo/microservices/core/review/services/MessageProcessor.class
+im/vbo/microservices/core/review/services/ReviewMapperImpl.class
+im/vbo/microservices/core/review/services/ReviewMapper.class
+im/vbo/microservices/core/review/services/ReviewServiceImpl.class

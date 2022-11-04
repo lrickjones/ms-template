@@ -1,3 +1,3 @@
-im/backoffice/microservices/core/review/PersistenceTests.class
-im/backoffice/microservices/core/review/ReviewServiceApplicationTests.class
-im/backoffice/microservices/core/review/MapperTests.class
+im/vbo/microservices/core/review/MapperTests.class
+im/vbo/microservices/core/review/PersistenceTests.class
+im/vbo/microservices/core/review/ReviewServiceApplicationTests.class

@@ -3,12 +3,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>im.backoffice.microservices</groupId>
+		<groupId>im.vbo.microservices</groupId>
 		<artifactId>ms-template</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 		<relativePath>../../pom.xml</relativePath> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>im.backoffice.microservices.composite.product</groupId>
+	<groupId>im.vbo.microservices.composite.product</groupId>
 	<artifactId>product-composite-service</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<name>product-composite-service</name>
@@ -22,34 +22,34 @@
 	<dependencies>
 
 		<dependency>
-			<groupId>im.backoffice.api</groupId>
+			<groupId>im.vbo.api</groupId>
 			<artifactId>asynchronous-api</artifactId>
 			<version>1.0.0-SNAPSHOT</version>
 		</dependency>
 		<dependency>
-			<groupId>im.backoffice.microservices.api</groupId>
+			<groupId>im.vbo.microservices.api</groupId>
 			<artifactId>api</artifactId>
 			<version>1.0.0-SNAPSHOT</version>
 		</dependency>
 		<dependency>
-			<groupId>im.backoffice.microservices.util</groupId>
+			<groupId>im.vbo.microservices.util</groupId>
 			<artifactId>util</artifactId>
 			<version>1.0.0-SNAPSHOT</version>
 		</dependency>
 		<dependency>
-			<groupId>im.backoffice.messaging</groupId>
+			<groupId>im.vbo.messaging</groupId>
 			<artifactId>rabbit-kafka</artifactId>
 			<version>1.0.0-SNAPSHOT</version>
 		</dependency>
 
 		<dependency>
-			<groupId>im.backoffice.api</groupId>
+			<groupId>im.vbo.api</groupId>
 			<artifactId>asynchronous-api-test</artifactId>
 			<version>1.0.0-SNAPSHOT</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>im.backoffice.messaging</groupId>
+			<groupId>im.vbo.messaging</groupId>
 			<artifactId>rabbit-kafka-test</artifactId>
 			<version>1.0.0-SNAPSHOT</version>
 			<scope>test</scope>

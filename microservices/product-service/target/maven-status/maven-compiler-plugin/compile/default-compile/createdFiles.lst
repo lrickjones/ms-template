@@ -1,8 +1,8 @@
-im/backoffice/microservices/core/product/persistence/ProductRepository.class
-im/backoffice/microservices/core/product/persistence/ProductEntity.class
-im/backoffice/microservices/core/product/services/ProductMapper.class
-im/backoffice/microservices/core/product/ProductServiceApplication.class
-im/backoffice/microservices/core/product/services/MessageProcessor.class
-im/backoffice/microservices/core/product/services/MessageProcessor$1.class
-im/backoffice/microservices/core/product/services/ProductServiceImpl.class
-im/backoffice/microservices/core/product/services/ProductMapperImpl.class
+im/vbo/microservices/core/product/services/MessageProcessor$1.class
+im/vbo/microservices/core/product/services/ProductMapperImpl.class
+im/vbo/microservices/core/product/services/ProductServiceImpl.class
+im/vbo/microservices/core/product/persistence/ProductEntity.class
+im/vbo/microservices/core/product/services/ProductMapper.class
+im/vbo/microservices/core/product/ProductServiceApplication.class
+im/vbo/microservices/core/product/services/MessageProcessor.class
+im/vbo/microservices/core/product/persistence/ProductRepository.class

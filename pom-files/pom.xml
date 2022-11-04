@@ -9,7 +9,7 @@
         <version>2.7.1</version>
         <relativePath/>
     </parent-->
-    <groupId>im.backoffice.microservices</groupId>
+    <groupId>im.vbo.microservices</groupId>
     <artifactId>ms-template</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
@@ -39,6 +39,7 @@
         <module>microservice/library</module>
         <module>db/mongo</module>
         <module>db/mysql</module>
+        <module>db/oracle</module>
         <module>db/sql-test</module>
         <module>health</module>
         <module>messaging</module>

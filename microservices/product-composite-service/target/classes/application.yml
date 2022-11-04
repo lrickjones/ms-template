@@ -1,4 +1,4 @@
-api:
+﻿api:
 
   common:
     version: 1.0.0
@@ -92,7 +92,7 @@ spring.rabbitmq:
 logging:
   level:
     root: INFO
-    im.backoffice: DEBUG
+    im.vbo: DEBUG
 
 management.endpoint.health.show-details: "ALWAYS"
 management.endpoints.web.exposure.include: "*"

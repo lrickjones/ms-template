@@ -1,5 +1,5 @@
-im/backoffice/microservices/composite/product/services/ProductCompositeIntegration$1.class
-im/backoffice/microservices/composite/product/services/ProductCompositeIntegration$MessageSources.class
-im/backoffice/microservices/composite/product/services/ProductCompositeIntegration.class
-im/backoffice/microservices/composite/product/services/ProductCompositeServiceImpl.class
-im/backoffice/microservices/composite/product/ProductCompositeServiceApplication.class
+im/vbo/microservices/composite/product/services/ProductCompositeIntegration$1.class
+im/vbo/microservices/composite/product/services/ProductCompositeIntegration$MessageSources.class
+im/vbo/microservices/composite/product/ProductCompositeServiceApplication.class
+im/vbo/microservices/composite/product/services/ProductCompositeIntegration.class
+im/vbo/microservices/composite/product/services/ProductCompositeServiceImpl.class

@@ -5,17 +5,17 @@
 
 	<!--Spring Boot framework for 1.0.0 based services -->	
 	<parent>
-		<groupId>im.backoffice.parent</groupId>
+		<groupId>im.vbo.parent</groupId>
 		<artifactId>spring-boot</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 		<relativePath>../../parent/pom.xml</relativePath>
 	</parent>
 
-	<groupId>im.backoffice.service</groupId>
+	<groupId>im.vbo.service</groupId>
 	<artifactId>service-starter</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<name>${project.groupId}:${project.artifactId}</name>
-	<description>Base backoffice service artifact</description>
+	<description>Base vbo service artifact</description>
 	<packaging>pom</packaging>
 
 	<!--Common java version  -->

@@ -1,5 +1,10 @@
-im/vbo/microservices/composite/product/services/ProductCompositeIntegration$1.class
 im/vbo/microservices/composite/product/services/ProductCompositeIntegration$MessageSources.class
 im/vbo/microservices/composite/product/ProductCompositeServiceApplication.class
+im/vbo/microservices/composite/product/services/ProductServiceHealthIndicator.class
+im/vbo/microservices/composite/product/services/RecommendationServiceHealthIndicator.class
 im/vbo/microservices/composite/product/services/ProductCompositeIntegration.class
+im/vbo/microservices/composite/product/services/ProductCompositeIntegration$1.class
+im/vbo/microservices/composite/product/services/APIHealthContributor.class
+im/vbo/microservices/composite/product/services/ReviewServiceHealthIndicator.class
+im/vbo/microservices/composite/product/services/APIHealthIndicator.class
 im/vbo/microservices/composite/product/services/ProductCompositeServiceImpl.class

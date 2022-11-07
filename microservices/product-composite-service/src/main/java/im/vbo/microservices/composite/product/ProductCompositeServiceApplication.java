@@ -1,11 +1,7 @@
 package im.vbo.microservices.composite.product;
 
-import im.vbo.microservices.composite.product.services.ProductCompositeIntegration;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.actuate.health.ReactiveHealthIndicator;
-import org.springframework.boot.actuate.health.StatusAggregator;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -60,27 +56,6 @@ public class ProductCompositeServiceApplication {
                     emptyList()
                 ));
     }
-
-	//TODO: implement health aggregator
-	@Autowired
-	StatusAggregator healthAggregator;
-
-	@Autowired
-	ProductCompositeIntegration integration;
-
-	@Bean
-	ReactiveHealthIndicator coreServices() {
-
-		//HealthContributorRegistry registry = new DefaultHealthContributorRegistry(new LinkedHashMap<>());
-
-		//registry.registerContributor("product", integration.getProductHealth());
-		//registry.registerContributor("recommendation", () -> integration.getRecommendationHealth());
-		//registry.registerContributor("review", () -> integration.getReviewHealth());
-
-		//return new ReactiveHealthIndicator(healthAggregator, registry);
-		return null;
-	}
-
 	public static void main(String[] args) {
 		SpringApplication.run(ProductCompositeServiceApplication.class, args);
 	}

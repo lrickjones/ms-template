@@ -4,11 +4,14 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import im.vbo.office.util.exceptions.InvalidInputException;
 import im.vbo.office.util.exceptions.NotFoundException;
 import im.vbo.office.util.http.HttpErrorInfo;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.actuate.health.Health;
+import org.springframework.boot.actuate.health.HealthContributor;
+import org.springframework.boot.actuate.health.HealthIndicator;
 import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.cloud.stream.annotation.Output;
 import org.springframework.messaging.MessageChannel;
@@ -33,9 +36,8 @@ import static im.vbo.api.event.Event.Type.CREATE;
 import static im.vbo.api.event.Event.Type.DELETE;
 @EnableBinding(ProductCompositeIntegration.MessageSources.class)
 @Component
+@Slf4j
 public class ProductCompositeIntegration implements ProductService, RecommendationService, ReviewService {
-
-    private static final Logger LOG = LoggerFactory.getLogger(ProductCompositeIntegration.class);
 
     private final WebClient webClient;
     private final ObjectMapper mapper;
@@ -96,7 +98,7 @@ public class ProductCompositeIntegration implements ProductService, Recommendati
     @Override
     public Mono<Product> getProduct(int productId) {
         String url = productServiceUrl + "/product/" + productId;
-        LOG.debug("Will call the getProduct API on URL: {}", url);
+        log.debug("Will call the getProduct API on URL: {}", url);
 
         return webClient.get().uri(url).retrieve().bodyToMono(Product.class).log().onErrorMap(WebClientResponseException.class, ex -> handleException(ex));
     }
@@ -117,7 +119,7 @@ public class ProductCompositeIntegration implements ProductService, Recommendati
 
         String url = recommendationServiceUrl + "/recommendation?productId=" + productId;
 
-        LOG.debug("Will call the getRecommendations API on URL: {}", url);
+        log.debug("Will call the getRecommendations API on URL: {}", url);
 
         // Return an empty result if something goes wrong to make it possible for the composite service to return partial responses
         return webClient.get().uri(url).retrieve().bodyToFlux(Recommendation.class).log().onErrorResume(error -> empty());
@@ -139,7 +141,7 @@ public class ProductCompositeIntegration implements ProductService, Recommendati
 
         String url = reviewServiceUrl + "/review?productId=" + productId;
 
-        LOG.debug("Will call the getReviews API on URL: {}", url);
+        log.debug("Will call the getReviews API on URL: {}", url);
 
         // Return an empty result if something goes wrong to make it possible for the composite service to return partial responses
         return webClient.get().uri(url).retrieve().bodyToFlux(Review.class).log().onErrorResume(error -> empty());
@@ -151,31 +153,10 @@ public class ProductCompositeIntegration implements ProductService, Recommendati
         messageSources.outputReviews().send(MessageBuilder.withPayload(new Event(DELETE, productId, null)).build());
     }
 
-    public Mono<Health> getProductHealth() {
-        return getHealth(productServiceUrl);
-    }
-
-    public Mono<Health> getRecommendationHealth() {
-        return getHealth(recommendationServiceUrl);
-    }
-
-    public Mono<Health> getReviewHealth() {
-        return getHealth(reviewServiceUrl);
-    }
-
-    private Mono<Health> getHealth(String url) {
-        url += "/actuator/health";
-        LOG.debug("Will call the Health API on URL: {}", url);
-        return webClient.get().uri(url).retrieve().bodyToMono(String.class)
-            .map(s -> new Health.Builder().up().build())
-            .onErrorResume(ex -> Mono.just(new Health.Builder().down(ex).build()))
-            .log();
-    }
-
     private Throwable handleException(Throwable ex) {
 
         if (!(ex instanceof WebClientResponseException)) {
-            LOG.warn("Got a unexpected error: {}, will rethrow it", ex.toString());
+            log.warn("Got a unexpected error: {}, will rethrow it", ex.toString());
             return ex;
         }
 
@@ -190,8 +171,8 @@ public class ProductCompositeIntegration implements ProductService, Recommendati
             return new InvalidInputException(getErrorMessage(wcre));
 
         default:
-            LOG.warn("Got a unexpected HTTP error: {}, will rethrow it", wcre.getStatusCode());
-            LOG.warn("Error body: {}", wcre.getResponseBodyAsString());
+            log.warn("Got a unexpected HTTP error: {}, will rethrow it", wcre.getStatusCode());
+            log.warn("Error body: {}", wcre.getResponseBodyAsString());
             return ex;
         }
     }

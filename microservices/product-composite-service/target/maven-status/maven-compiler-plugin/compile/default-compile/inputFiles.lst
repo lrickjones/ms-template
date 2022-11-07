@@ -1,3 +1,8 @@
 /home/rick/intermedia/dev/ms-template/microservices/product-composite-service/src/main/java/im/vbo/microservices/composite/product/services/ProductCompositeIntegration.java
+/home/rick/intermedia/dev/ms-template/microservices/product-composite-service/src/main/java/im/vbo/microservices/composite/product/services/APIHealthContributor.java
 /home/rick/intermedia/dev/ms-template/microservices/product-composite-service/src/main/java/im/vbo/microservices/composite/product/ProductCompositeServiceApplication.java
+/home/rick/intermedia/dev/ms-template/microservices/product-composite-service/src/main/java/im/vbo/microservices/composite/product/services/ProductServiceHealthIndicator.java
 /home/rick/intermedia/dev/ms-template/microservices/product-composite-service/src/main/java/im/vbo/microservices/composite/product/services/ProductCompositeServiceImpl.java
+/home/rick/intermedia/dev/ms-template/microservices/product-composite-service/src/main/java/im/vbo/microservices/composite/product/services/RecommendationServiceHealthIndicator.java
+/home/rick/intermedia/dev/ms-template/microservices/product-composite-service/src/main/java/im/vbo/microservices/composite/product/services/APIHealthIndicator.java
+/home/rick/intermedia/dev/ms-template/microservices/product-composite-service/src/main/java/im/vbo/microservices/composite/product/services/ReviewServiceHealthIndicator.java

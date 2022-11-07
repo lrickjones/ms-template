@@ -53,6 +53,12 @@
 		</dependency>
 
 		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.2.11</version>
+		</dependency>
+
+		<dependency>
 			<groupId>org.mapstruct</groupId>
 			<artifactId>mapstruct</artifactId>
 			<version>${mapstruct.version}</version>
@@ -95,6 +101,11 @@
 								<groupId>org.mapstruct</groupId>
 								<artifactId>mapstruct-processor</artifactId>
 								<version>${mapstruct.version}</version>
+							</path>
+							<path>
+								<groupId>org.projectlombok</groupId>
+								<artifactId>lombok</artifactId>
+								<version>1.18.10</version>
 							</path>
 						</annotationProcessorPaths>
 					</configuration>

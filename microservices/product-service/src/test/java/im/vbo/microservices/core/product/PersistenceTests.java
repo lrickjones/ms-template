@@ -12,9 +12,13 @@ import org.springframework.dao.OptimisticLockingFailureException;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import reactor.test.StepVerifier;
 
-@ExtendWith(SpringExtension.class)
 @DataMongoTest
+@ExtendWith(SpringExtension.class)
 public class PersistenceTests {
+
+    static {
+        System.setProperty("spring.mongodb.embedded.version","4.0.2");
+    }
 
     @Autowired
     private ProductRepository repository;

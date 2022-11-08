@@ -1,6 +1,7 @@
 package im.vbo.microservices.core.product;
 
 import im.vbo.microservices.core.product.persistence.ProductRepository;
+import im.vbo.microservices.core.product.services.ProductMapperImpl;
 import im.vbo.office.util.exceptions.InvalidInputException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -25,8 +26,12 @@ import static im.vbo.api.event.Event.Type.CREATE;
 import static im.vbo.api.event.Event.Type.DELETE;
 
 @ExtendWith(SpringExtension.class)
-@SpringBootTest(webEnvironment=RANDOM_PORT) // properties = {"spring.data.mongodb.port: 0"})
+@SpringBootTest(webEnvironment=RANDOM_PORT, properties = {"spring.data.mongodb.port: 0"})
 public class ProductServiceApplicationTests {
+
+	static {
+		System.setProperty("spring.mongodb.embedded.version","4.0.2");
+	}
 
     @Autowired
     private WebTestClient client;

@@ -39,6 +39,7 @@
         <module>microservice/service</module>
         <module>microservice/library</module>
         <module>db/mongo</module>
+        <module>db/mongo-test</module>
         <module>db/mysql</module>
         <module>db/oracle</module>
         <module>db/sql-test</module>

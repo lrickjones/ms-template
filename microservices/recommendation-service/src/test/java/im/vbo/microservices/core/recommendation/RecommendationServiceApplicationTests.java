@@ -30,10 +30,6 @@ import static im.vbo.api.event.Event.Type.DELETE;
 @SpringBootTest(webEnvironment=RANDOM_PORT, properties = {"spring.data.mongodb.port: 0"})
 public class RecommendationServiceApplicationTests {
 
-	static {
-		System.setProperty("spring.mongodb.embedded.version","4.0.2");
-	}
-
 	@Autowired
 	private WebTestClient client;
 

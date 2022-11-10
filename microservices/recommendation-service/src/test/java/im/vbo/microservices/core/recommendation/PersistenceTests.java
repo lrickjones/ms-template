@@ -21,10 +21,6 @@ import static org.junit.jupiter.api.Assertions.*;
 @ExtendWith(SpringExtension.class)
 public class PersistenceTests {
 
-    static {
-        System.setProperty("spring.mongodb.embedded.version","4.0.2");
-    }
-
     @Autowired
     private RecommendationRepository repository;
 

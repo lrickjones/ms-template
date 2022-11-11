@@ -1,23 +1,21 @@
 package im.vbo.microservices.core.recommendation.services;
 
+import im.vbo.api.core.recommendation.Recommendation;
+import im.vbo.api.core.recommendation.RecommendationService;
 import im.vbo.microservices.core.recommendation.persistence.RecommendationEntity;
 import im.vbo.microservices.core.recommendation.persistence.RecommendationRepository;
 import im.vbo.office.util.exceptions.InvalidInputException;
 import im.vbo.office.util.http.ServiceUtil;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-import im.vbo.api.core.recommendation.Recommendation;
-import im.vbo.api.core.recommendation.RecommendationService;
 
+@Slf4j
 @RestController
 public class RecommendationServiceImpl implements RecommendationService {
-
-    private static final Logger LOG = LoggerFactory.getLogger(RecommendationServiceImpl.class);
 
     private final RecommendationRepository repository;
 
@@ -64,7 +62,7 @@ public class RecommendationServiceImpl implements RecommendationService {
 
         if (productId < 1) throw new InvalidInputException("Invalid productId: " + productId);
 
-        LOG.debug("deleteRecommendations: tries to delete recommendations for the product with productId: {}", productId);
+        log.debug("deleteRecommendations: tries to delete recommendations for the product with productId: {}", productId);
         repository.deleteAll(repository.findByProductId(productId)).block();
     }
 }

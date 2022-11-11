@@ -1,23 +1,21 @@
 package im.vbo.microservices.composite.product.services;
 
 import im.vbo.api.composite.product.*;
-import im.vbo.office.util.http.ServiceUtil;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RestController;
-import reactor.core.publisher.Mono;
 import im.vbo.api.core.product.Product;
 import im.vbo.api.core.recommendation.Recommendation;
 import im.vbo.api.core.review.Review;
+import im.vbo.office.util.http.ServiceUtil;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RestController;
+import reactor.core.publisher.Mono;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Slf4j
 @RestController
 public class ProductCompositeServiceImpl implements ProductCompositeService {
-
-    private static final Logger LOG = LoggerFactory.getLogger(ProductCompositeServiceImpl.class);
 
     private final ServiceUtil serviceUtil;
     private final ProductCompositeIntegration integration;
@@ -33,7 +31,7 @@ public class ProductCompositeServiceImpl implements ProductCompositeService {
 
         try {
 
-            LOG.debug("createCompositeProduct: creates a new composite entity for productId: {}", body.getProductId());
+            log.debug("createCompositeProduct: creates a new composite entity for productId: {}", body.getProductId());
 
             Product product = new Product(body.getProductId(), body.getName(), body.getWeight(), null);
             integration.createProduct(product);
@@ -52,10 +50,10 @@ public class ProductCompositeServiceImpl implements ProductCompositeService {
                 });
             }
 
-            LOG.debug("createCompositeProduct: composite entities created for productId: {}", body.getProductId());
+            log.debug("createCompositeProduct: composite entities created for productId: {}", body.getProductId());
 
         } catch (RuntimeException re) {
-            LOG.warn("createCompositeProduct failed: {}", re.toString());
+            log.warn("createCompositeProduct failed: {}", re.toString());
             throw re;
         }
     }
@@ -67,7 +65,7 @@ public class ProductCompositeServiceImpl implements ProductCompositeService {
             integration.getProduct(productId),
             integration.getRecommendations(productId).collectList(),
             integration.getReviews(productId).collectList())
-            .doOnError(ex -> LOG.warn("getCompositeProduct failed: {}", ex.toString()))
+            .doOnError(ex -> log.warn("getCompositeProduct failed: {}", ex.toString()))
             .log();
     }
 
@@ -76,16 +74,16 @@ public class ProductCompositeServiceImpl implements ProductCompositeService {
 
         try {
 
-            LOG.debug("deleteCompositeProduct: Deletes a product aggregate for productId: {}", productId);
+            log.debug("deleteCompositeProduct: Deletes a product aggregate for productId: {}", productId);
 
             integration.deleteProduct(productId);
             integration.deleteRecommendations(productId);
             integration.deleteReviews(productId);
 
-            LOG.debug("deleteCompositeProduct: aggregate entities deleted for productId: {}", productId);
+            log.debug("deleteCompositeProduct: aggregate entities deleted for productId: {}", productId);
 
         } catch (RuntimeException re) {
-            LOG.warn("deleteCompositeProduct failed: {}", re.toString());
+            log.warn("deleteCompositeProduct failed: {}", re.toString());
             throw re;
         }
     }

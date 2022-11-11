@@ -1,24 +1,21 @@
 package im.vbo.office.util.http;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import im.vbo.office.util.exceptions.InvalidInputException;
+import im.vbo.office.util.exceptions.NotFoundException;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-import im.vbo.office.util.exceptions.InvalidInputException;
-import im.vbo.office.util.exceptions.NotFoundException;
 
 import static org.springframework.http.HttpStatus.NOT_FOUND;
 import static org.springframework.http.HttpStatus.UNPROCESSABLE_ENTITY;
 
+@Slf4j
 @RestControllerAdvice
 class GlobalControllerExceptionHandler {
-
-    private static final Logger LOG = LoggerFactory.getLogger(GlobalControllerExceptionHandler.class);
-
     @ResponseStatus(NOT_FOUND)
     @ExceptionHandler(NotFoundException.class)
     public @ResponseBody
@@ -38,7 +35,7 @@ class GlobalControllerExceptionHandler {
         final String path = request.getPath().pathWithinApplication().value();
         final String message = ex.getMessage();
 
-        LOG.debug("Returning HTTP status: {} for path: {}, message: {}", httpStatus, path, message);
+        log.debug("Returning HTTP status: {} for path: {}, message: {}", httpStatus, path, message);
         return new HttpErrorInfo(httpStatus, path, message);
     }
 }

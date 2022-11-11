@@ -1,25 +1,21 @@
 package im.vbo.microservices.core.product.services;
 
+import im.vbo.api.core.product.Product;
+import im.vbo.api.core.product.ProductService;
 import im.vbo.microservices.core.product.persistence.ProductEntity;
 import im.vbo.microservices.core.product.persistence.ProductRepository;
 import im.vbo.office.util.exceptions.InvalidInputException;
 import im.vbo.office.util.exceptions.NotFoundException;
 import im.vbo.office.util.http.ServiceUtil;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Mono;
-import im.vbo.api.core.product.Product;
-import im.vbo.api.core.product.ProductService;
 
-import static reactor.core.publisher.Mono.error;
-
+@Slf4j
 @RestController
 public class ProductServiceImpl implements ProductService {
-
-    private static final Logger LOG = LoggerFactory.getLogger(ProductServiceImpl.class);
 
     private final ServiceUtil serviceUtil;
 
@@ -67,7 +63,7 @@ public class ProductServiceImpl implements ProductService {
 
         if (productId < 1) throw new InvalidInputException("Invalid productId: " + productId);
 
-        LOG.debug("deleteProduct: tries to delete an entity with productId: {}", productId);
+        log.debug("deleteProduct: tries to delete an entity with productId: {}", productId);
         repository.findByProductId(productId).log().map(e -> repository.delete(e)).flatMap(e -> e).block();
     }
 }

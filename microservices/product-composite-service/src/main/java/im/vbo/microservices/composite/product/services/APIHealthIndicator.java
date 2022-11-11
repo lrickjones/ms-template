@@ -20,12 +20,11 @@ public abstract class APIHealthIndicator {
     @Autowired
     public APIHealthIndicator(WebClient.Builder webClient, String url) {
         this.webClient = webClient.build();
-        this.url = url;
+        this.url = url + "/actuator/health";
     }
 
     protected Health callAPIHealth() {
-        url += "/actuator/health";
-        //log.debug("Will call the Health API on URL: {}", url);
+        log.debug("Will call the Health API on URL: {}", url);
         return webClient.get().uri(url).retrieve().bodyToMono(String.class)
                 .map(s -> new Health.Builder().up().build())
                 .onErrorResume(ex -> Mono.just(new Health.Builder().down(ex).build()))

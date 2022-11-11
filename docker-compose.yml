@@ -114,5 +114,5 @@ services:
     healthcheck:
       test: ["CMD", "rabbitmqctl", "status"]
       interval: 10s
-      timeout: 5s
+      timeout: 5sj
       retries: 10

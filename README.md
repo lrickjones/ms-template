@@ -37,11 +37,13 @@ ms-template implements the Spring Boot actuator to provide a /actuator/health en
 The docker-compose.yml gives examples of how to expose the actuator/health endpoint to docker.
 
 # Dependencies
-im.vbo poms must be in the build path
-
-docker must have a path to docker-hub repository
-
-In the pom files root directory mvn clean install will install the poms in the local cache
+* docker
+* docker-compose
+* maven
+* libssl-dev (ubuntu)
+* im.vbo poms must be in the build path
+* docker must have a path to docker-hub repository (for docker-compose)
+* im.vbo poms files (In the pom files root directory mvn clean install to add poms to the local cache)
 
 # Quick Start Guide
 After cloning project, from project root:

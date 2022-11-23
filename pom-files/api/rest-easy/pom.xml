@@ -11,21 +11,28 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>im.vbo.api</groupId>
-    <artifactId>rest_easy</artifactId>
+    <artifactId>rest-easy</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>${project.groupId}:${project.artifactId}</name>
     <description>Support for reactive dependencies</description>
     <properties>
         <jboss.version>5.1.0.Final</jboss.version>
+        <jboss.multipart.version>4.7.1.Final</jboss.multipart.version>
     </properties>
     <dependencies>
 
-        <dependency>
+        <!--dependency>
             <groupId>org.jboss.resteasy</groupId>
             <artifactId>resteasy-servlet-spring-boot-starter</artifactId>
             <version>${jboss.version}</version>
             <scope>runtime</scope>
+        </dependency-->
+
+        <dependency>
+            <groupId>org.jboss.resteasy</groupId>
+            <artifactId>resteasy-multipart-provider</artifactId>
+            <version>${jboss.multipart.version}</version>
         </dependency>
 
         <dependency>
@@ -33,6 +40,18 @@
             <artifactId>resteasy-reactor-netty-spring-boot-starter</artifactId>
             <version>${jboss.version}</version>
             <scope>runtime</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-boot-starter</artifactId>
+            <version>3.0.0</version>
         </dependency>
 
     </dependencies>

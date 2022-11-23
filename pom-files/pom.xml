@@ -43,15 +43,17 @@
         <module>db/mysql</module>
         <module>db/oracle</module>
         <module>db/sql-test</module>
+        <module>db/mssql</module>
         <module>health</module>
+        <module>javax</module>
         <module>spring-cloud</module>
         <module>messaging/kafka</module>
         <module>messaging/rabbitmq</module>
         <module>messaging/test</module>
         <module>api/asynchronous</module>
         <module>api/asynchronous/test</module>
-        <module>api/rest_easy</module>
-        <module>api/rest_easy/test</module>
+        <module>api/rest-easy</module>
+        <module>api/rest-easy/test</module>
     </modules>
 
 </project>

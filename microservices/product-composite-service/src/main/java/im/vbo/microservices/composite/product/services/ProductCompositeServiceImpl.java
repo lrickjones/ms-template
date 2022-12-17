@@ -5,6 +5,7 @@ import im.vbo.api.core.product.Product;
 import im.vbo.api.core.recommendation.Recommendation;
 import im.vbo.api.core.review.Review;
 import im.vbo.office.util.http.ServiceUtil;
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,6 +16,7 @@ import java.util.stream.Collectors;
 
 @Slf4j
 @RestController
+@OpenAPIDefinition
 public class ProductCompositeServiceImpl implements ProductCompositeService {
 
     private final ServiceUtil serviceUtil;
